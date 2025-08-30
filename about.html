@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #ff7eb3, #ff758c);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        h1 span {
+            display: inline-block;
+            transform: rotateX(90deg);
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: rotateX(0);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0 40px;
+            line-height: 1.8;
+            animation: fadeInUp 1.2s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card-item:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            animation: fadeInUp 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #07bef1;
+            transform: scale(1.2);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello! I'm <span>Dhanush M</span></h1>
+        <p>
+            I’m a passionate web developer with a love for creating beautiful, responsive websites.
+            I specialize in front-end development, bringing ideas to life with modern technologies
+            and intuitive designs.
+        </p>
+
+        <div class="card">
+            <div class="card-item">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.omPXY_BUVXGcOrODdeSwSwAAAA&pid=Api&P=0&h=180" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Crafting user-friendly websites</p>
+            </div>
+            <div class="card-item">
+                <img src="https://cdn2.iconfinder.com/data/icons/design-butterscotch-vol-2/256/UX_UI_Design-1024.png" alt="Design">
+                <h3>UI/UX Design</h3>
+                <p>Designing seamless interfaces</p>
+            </div>
+            <div class="card-item">
+                <img src="https://cdn3.iconfinder.com/data/icons/innovation-1/48/16-innovation-512.png" alt="Innovation">
+                <h3>Innovation</h3>
+                <p>Implementing creative solutions</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><i>🔗 LinkedIn</i></a>
+            <a href="https://github.com" target="_blank"><i>🐙 GitHub</i></a>
+            <a href="https://twitter.com" target="_blank"><i>🐦 Twitter</i></a>
+        </div>
+    </div>
+</body>
+</html>

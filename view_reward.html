@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        h1{
+            background-color: black;
+            color:white;
+            margin:80px;
+            border-style:groove;
+            border-radius:20px;
+        }
+    </style>
+</head>
+<body align="center">
+    <div class="bac" >
+        <header>
+            <h1>Your Rewards Dashboard</h1>
+        </header>
+        <section id="rewards">
+            <h2>Your Rewards</h2>
+            <div class="reward-card">
+                <h3>Reward 1</h3>
+                <p>Points: 50</p>
+                <p>Expires: 2024-12-31</p>
+            </div>
+            <div class="reward-card">
+                <h3>Reward 2</h3>
+                <p>Points: 100</p>
+                <p>Expires: 2025-01-15</p>
+            </div>
+        </section>
+        <section id="activity-graph">
+            <h2>Activity Insights</h2>
+            <canvas id="activityChart" width="800" height="200"></canvas>
+        </section>
+    </div>
+    <script>
+        const ctx = document.getElementById('activityChart').getContext('2d');
+        const activityChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                datasets: [{
+                    label: 'Daily Logins',
+                    data: [3, 4, 2, 5, 4],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
